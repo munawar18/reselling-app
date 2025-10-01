@@ -11,7 +11,7 @@ const app = express();
 
 // ✅ Allow requests only from your frontend
 app.use(cors({
-  origin: "https://reselling-frontend.onrender.com", // replace with your frontend Render URL
+  origin: "https://reselling-app-1.onrender.com", // replace with your frontend Render URL
 }));
 
 app.use(express.json());
