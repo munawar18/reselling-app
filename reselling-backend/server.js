@@ -8,7 +8,12 @@ const salesRouter = require('./routes/sales');
 const profitRouter = require('./routes/profitLoss');
 
 const app = express();
-app.use(cors());
+
+// ✅ Allow requests only from your frontend
+app.use(cors({
+  origin: "https://reselling-frontend.onrender.com", // replace with your frontend Render URL
+}));
+
 app.use(express.json());
 
 app.use('/api/items', itemsRouter);
